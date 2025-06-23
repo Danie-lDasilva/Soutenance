@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soutenance – Daniel Da Silva</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<script>
+  const slides = [
+    {
+      img: 'assets/img/Analyse.jpg',
+      img2: 'assets/img/Analyse 2.jpg',
+      title: 'Analyse Concurrentielle',
+      subtitle1: 'Démarche',
+      text1: "Étude des sites concurrents pour comprendre les codes graphiques et ergonomiques des événements similaires.",
+      subtitle2: 'Utilité',
+      text2: "Elle a permis de définir des axes de différenciation et de poser des bases solides pour la direction artistique."
+    },
+    {
+      img: 'assets/img/Maquette illustration.jpg',
+      img2: 'assets/img/Maquette sobre.jpg',
+      title: 'Maquettage',
+      subtitle1: 'Démarche',
+      text1: "Réalisation de plusieurs propositions sur XD, déclinées autour des couleurs, typos et éléments festifs du festival.",
+      subtitle2: 'Utilité',
+      text2: "Les maquettes ont servi de base aux retours de l’équipe pour ajuster le design avant intégration."
+    },
+    {
+      img: 'assets/img/Code php.jpg',
+        img2: 'assets/img/Code css.jpg',
+      title: 'Développement',
+      subtitle1: 'Démarche',
+      text1: "Codage complet du site en PHP natif, structuration modulaire, intégration responsive et système dynamique.",
+      subtitle2: 'Utilité',
+      text2: "Création d’un site stable, esthétique et administrable, en phase avec l’ambiance du festival."
+    }
+  ];
+
+  let current = 0;
+
+  function changeSlide(step) {
+    current = (current + step + slides.length) % slides.length;
+    const s = slides[current];
+    document.getElementById('slideShow').innerHTML = `
+      <h3>${s.title}</h3>
+      <h4>${s.subtitle1}</h4>
+      <p>${s.text1}</p>
+      <h4>${s.subtitle2}</h4>
+      <p>${s.text2}</p>
+      <div class="images-contain">
+      <img src="${s.img}" alt="${s.title}">
+      <img src="${s.img2}" alt="${s.title}">
+      </div>
+    `;
+  }
+</script>
+
+
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="header-logo">
+        <a href="#">
+          <img src="assets/img/Logo.svg" alt="Logo Cubasanga" class="logo">
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#Introduction">Introduction</a></li>
+          <li><a href="#Présentation">Présentation</a></li>
+          <li><a href="#Bilan">Bilan</a></li>
+          <li><a href="#Conclusion">Conclusion</a></li>
+        </ul>
+        <a href="#Remerciements" class="button-remerciements-link">
+          <button class="button-remerciements">Remerciements</button>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="landing-modern">
+      <!-- Palmiers décoratifs -->
+      <img src="assets/img/Palmier-Gauche.png" alt="Palmier décoratif gauche" class="palmier-left">
+      <img src="assets/img/Palmier-Droite.png" alt="Palmiers décoratifs droite" class="palmier-right">
+
+      <!-- Contenu principal -->
+      <div class="container">
+        <img src="assets/img/LogoCarré.svg" alt="Logo" class="logo-main">
+
+        <h1 class="main-title">Soutenance de stage</h1>
+        <h2 class="subtitle">Refonte du site Cubasanga</h2>
+
+        <p class="author">Daniel Da Silva – B1 Web & Multimédia</p>
+
+        <p class="dates">
+          <span class="date">14 Avril 2025</span> – <span class="date">6 Juin 2025</span>
+        </p>
+
+        <a href="#Introduction" class="cta-button">Commencer</a>
+      </div>
+    </section>
+
+    <div class="separation-image">
+        <img src="assets/img/Séparation.png" alt="Séparateur plage" />
+    </div>
+
+<section class="section-contexte" id="Introduction">
+  <div class="contexte-texte">
+    <h2>Contexte</h2>
+    <p>Dans le cadre de ma première année de formation en B1 Cycle Web & Multimédia, j’ai effectué un stage de huit semaines, représentant une première immersion dans le monde professionnel.</p>
+    <p>J’ai eu l’opportunité d’intégrer l’association <strong>Bailanima</strong>, organisatrice du festival <strong>Cubasanga</strong>, un événement culturel et festif centré sur les danses et musiques caribéennes. Ce stage m’a permis de participer à la refonte complète du site internet du festival, tout en découvrant le fonctionnement d’une association culturelle et les coulisses de l’organisation d’un événement d’envergure.</p>
+    <p>J’ai été encadré par <strong>Delphine</strong> (suivi du projet) et <strong>Haithem</strong> (développeur). L’objectif principal était de moderniser le site du festival afin de mieux refléter l’univers festif et chaleureux de l’événement.</p>
+  </div>
+  <div class="contexte-image">
+    <img src="assets/img/sam jour-89.jpg" alt="Delphine et Haithem">
+  </div>
+</section>
+
+<div class="separation-image-bleu">
+    <img src="assets/img/Séparation-Bleu.png" alt="Séparateur plage" />
+</div>
+    
+
+<section class="section-missions">
+  <div class="missions-image">
+    <img src="assets/img/Code.png" alt="Illustration des missions">
+  </div>
+  <div class="missions-texte">
+    <h2>Missions</h2>
+    <p>
+      • Créer une identité visuelle numérique cohérente avec celle utilisée sur les réseaux<br>
+      • Proposer une expérience utilisateur fluide, immersive et responsive<br>
+      • Développer le site de façon à ce qu’il soit administrable facilement par l’équipe via une API personnalisée<br>
+      • Adapter le site à différents supports (ordinateur, tablette, mobile)<br>
+      • Respecter l’ambiance du festival tout en intégrant les contraintes de temps et de faisabilité
+
+    </p>
+  </div>
+</section>
+
+<div class="separation-image fond">
+    <img src="assets/img/Séparation.png" alt="Séparateur plage" />
+</div>
+
+<section class="section-contexte">
+  <div class="contexte-texte">
+    <h2>Outils et Applications Utilisés</h2>
+    <p>Durant mon stage, j’ai utilisé divers outils professionnels pour concevoir, coder, organiser et collaborer efficacement sur le projet. De la création de maquettes jusqu’à la fin de mon stage, chaque application a joué un rôle spécifique dans l’avancement du travail.</p>
+  </div>
+  <div class="missions-image">
+    <img src="assets/img/Applis.png" alt="Illustration d'applis">
+  </div>
+</section>
+
+<div class="carrousel">
+    <div class="carrousel-track">
+      <img src="assets/img/VS Code.svg" alt="VS Code">
+      <img src="assets/img/mamp-pro.webp" alt="MAMP">
+      <img src="assets/img/Github.png" alt="GitHub">
+      <img src="assets/img/XD.png" alt="Adobe XD">
+      <img src="assets/img/Photoshop.png" alt="Photoshop">
+      <img src="assets/img/Illustrator.png" alt="Illustrator">
+      <img src="assets/img/Canva.png" alt="Canva">
+      <img src="assets/img/VS Code.svg" alt="VS Code">
+      <img src="assets/img/mamp-pro.webp" alt="MAMP">
+      <img src="assets/img/Github.png" alt="GitHub">
+      <img src="assets/img/XD.png" alt="Adobe XD">
+      <img src="assets/img/Photoshop.png" alt="Photoshop">
+      <img src="assets/img/Illustrator.png" alt="Illustrator">
+      <img src="assets/img/Canva.png" alt="Canva">
+      <img src="assets/img/VS Code.svg" alt="VS Code">
+      <img src="assets/img/mamp-pro.webp" alt="MAMP">
+      <img src="assets/img/Github.png" alt="GitHub">
+      <img src="assets/img/XD.png" alt="Adobe XD">
+      <img src="assets/img/Photoshop.png" alt="Photoshop">
+      <img src="assets/img/Illustrator.png" alt="Illustrator">
+      <img src="assets/img/Canva.png" alt="Canva">
+      <img src="assets/img/VS Code.svg" alt="VS Code">
+      <img src="assets/img/mamp-pro.webp" alt="MAMP">
+      <img src="assets/img/Github.png" alt="GitHub">
+      <img src="assets/img/XD.png" alt="Adobe XD">
+      <img src="assets/img/Photoshop.png" alt="Photoshop">
+      <img src="assets/img/Illustrator.png" alt="Illustrator">
+      <img src="assets/img/Canva.png" alt="Canva">
+      <img src="assets/img/VS Code.svg" alt="VS Code">
+      <img src="assets/img/mamp-pro.webp" alt="MAMP">
+      <img src="assets/img/Github.png" alt="GitHub">
+      <img src="assets/img/XD.png" alt="Adobe XD">
+      <img src="assets/img/Photoshop.png" alt="Photoshop">
+      <img src="assets/img/Illustrator.png" alt="Illustrator">
+      <img src="assets/img/Canva.png" alt="Canva">
+      
+    </div>
+  </div>
+  
+  <div class="separation-image-bleu">
+    <img src="assets/img/Séparation-Bleu.png" alt="Séparateur plage" />
+</div>
+
+<section class="section-slides">
+  <button class="slide-nav prev" onclick="changeSlide(-1)">&#10094;</button>
+
+  <div class="slide-content" id="Présentation" >
+    <h3>Analyse Concurrentielle</h3>
+    <h4>Démarche</h4>
+    <p>Étude des sites concurrents pour comprendre les codes graphiques et ergonomiques des événements similaires.</p>
+    <h4>Utilité</h4>
+    <p>"Elle a permis de définir des axes de différenciation et de poser des bases solides pour la direction artistique.</p>
+    <div class="images-contain">
+        <img src="assets/img/Analyse.jpg" alt="analyse concurrentielle">
+        <img src="assets/img/Analyse 2.jpg" alt="analyse concurrentielle 2">
+    </div>
+    
+  </div>
+
+  <button class="slide-nav next" onclick="changeSlide(1)">&#10095;</button>
+</section>
+
+<div class="separation-image fond">
+    <img src="assets/img/Séparation.png" alt="Séparateur plage" />
+</div>
+
+<section class="resultats-section">
+  <h2>Résultats et livrables</h2>
+  <p class="intro-resultats">
+    Au terme de ces différentes étapes, plusieurs réalisations concrètes ont vu le jour. Cette galerie présente un aperçu des livrables produits, allant des maquettes jusqu’au site final développé.
+  </p>
+  <div class="resultats-galerie">
+    <img src="assets/img/Accueil.jpg" alt="Accueil">
+    <img src="assets/img/Programme.jpg" alt="Programme">
+    <img src="assets/img/Gallerie.jpg" alt="galerie">
+    <img src="assets/img/Galerie ouverte.jpg" alt="galerie ouverte">
+    <img src="assets/img/FAQ.jpg" alt="FAQ">
+  </div>
+</section>
+
+<div class="separation-image-bleu">
+    <img src="assets/img/Séparation-Bleu.png" alt="Séparateur plage" />
+</div>
+
+<section class="section-missions" id="Bilan">
+  <div class="missions-texte">
+    <h2>Bilan personnel et professionnel</h2>
+    <p class="bilan-text">
+    Ce stage m’a offert une première expérience professionnelle concrète, me plongeant dans un environnement réel de production au sein d’une structure associative dynamique. Il m’a permis de consolider mes compétences techniques en développement web, notamment en HTML, CSS et PHP, tout en mettant en pratique les notions de responsive design et d’accessibilité. J’ai également amélioré ma maîtrise des outils de maquettage, de versioning, et d’organisation de projet.
+  </p>
+  <p class="bilan-text">
+    Sur le plan humain, j’ai gagné en autonomie et en rigueur. Travailler aux côtés de Haithem, développeur expérimenté, m’a permis d’appréhender l’importance de la lisibilité du code, de la structure des dossiers, et de la réutilisabilité des composants. Les échanges réguliers avec Delphine m’ont appris à mieux communiquer mes choix graphiques et à argumenter mes propositions avec clarté. Cette expérience m’a aussi confronté à des contraintes réelles de temps et de faisabilité, auxquelles j’ai dû m’adapter.
+  </p>
+  <p class="bilan-text">
+    Je ressors de ce stage plus confiant dans ma capacité à m’adapter à un environnement professionnel et à répondre aux attentes d’un client ou d’une équipe. Cela a confirmé mon attrait pour les projets mêlant design et développement, et a affiné mon projet d’orientation vers le front-end et l’UX/UI design.</p>
+  </div>
+    <div class="missions-image">
+    <img src="assets/img/Bilan.png" alt="Illustration des missions">
+  </div>
+</section>
+
+<div class="separation-image fond">
+    <img src="assets/img/Séparation.png" alt="Séparateur plage" />
+</div>
+
+<section class="section-contexte" id="Conclusion">
+    <div class="missions-image">
+    <img src="assets/img/Conclusion.png" alt="Illustration des missions">
+  </div>
+
+    <div class="contexte-texte">
+        <h2>Conclusion</h2>
+
+        <p class="conclusion-text">
+    Cette immersion dans l’univers associatif m’a offert une opportunité précieuse d’allier apprentissage technique, créativité graphique et gestion de projet. La diversité des missions m’a permis de suivre toutes les étapes d’un projet digital, de l’analyse jusqu’à la mise en ligne.
+  </p>
+  <p class="conclusion-text">
+    Le site développé pour Cubasanga constitue aujourd’hui un support de communication moderne, immersif et cohérent avec l’image festive du festival. C’est une réalisation dont je suis fier et qui enrichit significativement mon portfolio.
+  </p>
+  <p class="conclusion-text">
+    Ce stage a confirmé mon envie de continuer à travailler dans le domaine du web, notamment dans des projets à dimension culturelle et artistique. Pour la suite, je souhaite approfondir mes compétences en JavaScript, frameworks front-end et design d’interfaces, afin de gagner en polyvalence et en efficacité.
+  </p>
+    </div>
+</section>
+
+<div class="separation-image">
+    <img src="assets/img/Séparation-fin.png" alt="Séparateur plage" />
+</div>
+  </main>
+
+  <section class="remerciements-fullpage">
+  <img src="assets/img/Parasol.png" alt="Tournesol" class="tournesol tournesol-left">
+  <img src="assets/img/Parasol.png" alt="Tournesol" class="tournesol tournesol-right">
+  <img src="assets/img/palmier-gauche.png" alt="Palmier gauche" class="palmier palmier-gauche">
+  <img src="assets/img/Palmier-Droite.png" alt="Palmier droit" class="palmier palmier-droit">
+  <img src="assets/img/Palmier + Soleil.png" alt="Palmier droit" class="palmier palmier-soleil">
+  <div class="remerciements-center">
+    <h2>Remerciements</h2>
+    <p>Un immense merci à l’association Bailanima, en particulier à Delphine et Haithem, pour leur accompagnement et leur bienveillance tout au long de ce stage. Merci également à mes formateurs et à toutes les personnes ayant contribué à rendre cette expérience enrichissante et inoubliable.</p>
+  </div>
+</section>
+  
+
+</body>
+</html>
